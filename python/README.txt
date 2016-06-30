@@ -1,0 +1,1 @@
+clear; rm debug.txt; python tetris_play.py; cat debug.txt
