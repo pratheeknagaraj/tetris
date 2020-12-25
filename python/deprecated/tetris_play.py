@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: latin-1 -*-
 
 from curses import KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN
@@ -208,8 +208,8 @@ try:
         x = game_size[0]
         y = game_size[1]
 
-        win.addstr(12, x // 2 + 4, 'Game Over', curses.color_pair(22))
-        win.addstr(13, x // 2, '[SPACE] - New Game', curses.color_pair(22))
+        win.addstr(12, x/2 + 4, 'Game Over', curses.color_pair(22))
+        win.addstr(13, x/2, '[SPACE] - New Game', curses.color_pair(22))
 
     # draw()
 
@@ -253,11 +253,11 @@ try:
         input_thread.join()
 
     curses.endwin()
-    print(f'\nScore: {game.score}')
+    print '\nScore:', game.score
 
 except:
     curses.endwin()
     raise
 
 if stored_exc:
-    raise(stored_exc[0], stored_exc[1], stored_exc[2])
+    raise stored_exc[0], stored_exc[1], stored_exc[2]

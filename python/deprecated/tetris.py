@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: latin-1 -*-
 
 import random
@@ -375,7 +375,7 @@ class Tetris:
                         cell.y = current_fill_by_col[x]-1
                         current_fill_by_col[x] -= 1
 
-            displacement = cells_cleared // self.cols
+            displacement = cells_cleared / self.cols
             #for cell in self.filled_cells:
             #    cell.y += displacement
 
@@ -396,7 +396,7 @@ class Tetris:
         self.score += BASE * MULT[count] * self.level * combo_mult
         self.lines += count
 
-        self.level = self.lines // self.level_advance + 1
+        self.level = self.lines/self.level_advance + 1
         self.set_tick_step()
 
     def set_tick_step(self):
@@ -629,7 +629,7 @@ class Tetris:
         return piece
 
     def center_cells(self):
-        x_mid = self.cols // 2
+        x_mid = self.cols/2
         y_mid = 0
         return [(x_mid,y_mid)]*4
 

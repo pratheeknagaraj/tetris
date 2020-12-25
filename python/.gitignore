@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VIM Swaps
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
